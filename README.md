@@ -1,5 +1,10 @@
 # Merge Word  
 可以将多个Word文档合并成一个Word文档  
+
+### 开发环境
+python3.11  
+Document, Composer库  
+GUI库：Tkinter, ttkbootstrap  
   
 ### 注意
 当前仅支持.docx文件的导入与导出，其他格式文件请先转化为docx文件  
