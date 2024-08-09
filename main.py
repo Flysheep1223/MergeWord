@@ -1,8 +1,10 @@
 import os
-from tkinter import Tk, Label, Button, Entry, filedialog, messagebox, Listbox, END, Toplevel, EXTENDED, Frame
+from tkinter import Label, Button, Entry, filedialog, messagebox, Listbox, END, Toplevel, EXTENDED, Frame
+
+import ttkbootstrap as ttk
 from docx import Document
 from docxcompose.composer import Composer
-import ttkbootstrap as ttk
+
 
 def merge_doc(source_file_path_list, target_file_path):
     try:
@@ -116,7 +118,7 @@ root.geometry("1100x300")
 root.title("Word Document Merger")
 
 # 创建标签和输入框
-source_files_label = Label(root, text="") #布局占位符
+source_files_label = Label(root, text="")  # 布局占位符
 source_files_label.grid(row=0, column=0, padx=10, pady=10)
 
 source_files_label = Label(root, text="Source Files:")
