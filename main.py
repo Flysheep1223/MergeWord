@@ -116,26 +116,29 @@ root.geometry("1100x300")
 root.title("Word Document Merger")
 
 # 创建标签和输入框
-source_files_label = Label(root, text="Source Files:")
+source_files_label = Label(root, text="") #布局占位符
 source_files_label.grid(row=0, column=0, padx=10, pady=10)
 
+source_files_label = Label(root, text="Source Files:")
+source_files_label.grid(row=1, column=0, padx=10, pady=10)
+
 source_files_entry = Entry(root, width=50)
-source_files_entry.grid(row=0, column=1, padx=10, pady=10)
+source_files_entry.grid(row=1, column=1, padx=10, pady=10)
 
 source_files_button = Button(root, text="Browse...", command=select_source_files)
-source_files_button.grid(row=0, column=2, padx=10, pady=10)
+source_files_button.grid(row=1, column=2, padx=10, pady=10)
 
 target_file_label = Label(root, text="Target File:")
-target_file_label.grid(row=1, column=0, padx=10, pady=10)
+target_file_label.grid(row=2, column=0, padx=10, pady=10)
 
 target_file_entry = Entry(root, width=50)
-target_file_entry.grid(row=1, column=1, padx=10, pady=10)
+target_file_entry.grid(row=2, column=1, padx=10, pady=10)
 
 target_file_button = Button(root, text="Browse...", command=select_target_file)
-target_file_button.grid(row=1, column=2, padx=10, pady=10)
+target_file_button.grid(row=2, column=2, padx=10, pady=10)
 
 merge_button = Button(root, text="Merge", command=merge_files)
-merge_button.grid(row=2, column=0, columnspan=3, pady=20)
+merge_button.grid(row=3, column=0, columnspan=3, pady=20)
 
 # 运行主循环
 root.mainloop()
